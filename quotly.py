@@ -40,7 +40,7 @@ async def _(event):
                 events.NewMessage(incoming=True, from_users=1031952739)
             )
             er = await event.client.forward_messages(chat, reply_message)
-            if not len(col) == 0:  # Bad way
+            if len(col) != 0:  # Bad way
                 await asyncio.sleep(3)
                 await er.reply(f"/q {col}")
             response = await response

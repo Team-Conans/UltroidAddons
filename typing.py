@@ -25,7 +25,7 @@ async def _(event):
     if not input_str:
         return await eor(event, "Give me something to type !")
     shiiinabot = "\u2060"
-    for i in range(601):
+    for _ in range(601):
         shiiinabot += "\u2060"
     try:
         okla = await eor(event, shiiinabot)

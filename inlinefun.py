@@ -122,9 +122,10 @@ async def nope(doit):
             )
     sticcers = await doit.client.inline_query("Lybot", f"{(deEmojify(ok))}")
     await sticcers[0].click(
-            doit.chat_id,
-            reply_to=doit.reply_to_msg_id,
-            silent=True if doit.is_reply else False,
-            hide_via=True,
-        )
+        doit.chat_id,
+        reply_to=doit.reply_to_msg_id,
+        silent=bool(doit.is_reply),
+        hide_via=True,
+    )
+
     await a.delete()
